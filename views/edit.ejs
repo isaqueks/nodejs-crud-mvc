@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head') %>
+        <title>Edit profile</title>
+</head>
+
+<body class="center">
+
+    <% if (typeof user !== 'undefined' && user.loggedIn) {  %>
+        <%- include('partials/logged-navbar') %>
+    <% } else { %>
+        <%- include('partials/non-logged-navbar') %>
+    <% } %>
+
+        <div class="form-container">
+            <form action="edit" method="POST">
+
+                <div class="center">
+                    <h1>Edit profile</h1>
+                </div>
+
+                <label for="name">Name:</label>
+                <input type="text" name="name" value="<%= user.loggedIn ? user.name : '' %>">
+
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" value="<%= user.loggedIn ? user.email : '' %>">
+
+                <label for="description">Description:</label>
+                <textarea name="description"><%= user.loggedIn ? user.description : '' %></textarea>
+
+                <input type="submit" value="Save">
+
+                <div class="center">
+                    <a href="delete" class="danger">Delete account</a>
+                    <br>
+                    <p class="error">
+                        <%- typeof error=='string' ? error : '' %>
+                    </p><br>
+                </div>
+            </form>
+        </div>
+
+
+</body>
+
+</html>

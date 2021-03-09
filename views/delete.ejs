@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head') %>
+    <title>Delete account</title>
+</head>
+<body class="center">
+
+    <% if (typeof user !== 'undefined' && user.loggedIn) {  %>
+        <%- include('partials/logged-navbar') %>
+    <% } else { %>
+        <%- include('partials/non-logged-navbar') %>
+    <% } %>
+
+    <form method="POST" action="delete" class="center">
+
+        <br>
+
+        <% if (typeof user != 'undefined' && user.loggedIn) {  %>
+            <h2>Are you sure you want to delete the acccount?</h2>
+
+            <input type="hidden" name="confirm" value="yes">
+
+            <button type="submit" class="hidden-btn danger">
+                Yes, delete the account!
+            </button>
+
+            &nbsp;|&nbsp;
+            
+            <a href="/edit">
+                Cancel
+            </a>
+
+            <br>
+        <% } %>
+
+        <p class="error">
+            <%- typeof error=='string' ? error : '' %>
+        </p>
+
+    </form>
+
+
+</body>
+</html>

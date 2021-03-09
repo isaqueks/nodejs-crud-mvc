@@ -1,0 +1,10 @@
+{
+	"controllers": {
+		"/": "./controllers/index.controller.js",
+    "/register": "./controllers/register.controller.js",
+    "/logout": "./controllers/logout.controller.js",
+    "/login": "./controllers/login.controller.js",
+    "/edit": "./controllers/edit.controller.js",
+    "/delete": "./controllers/delete.controller.js"
+	}
+}

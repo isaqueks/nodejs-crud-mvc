@@ -1,0 +1,125 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    font: 1em sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.error {
+    margin: 4px 0px 4px 0px;
+    color: red;
+}
+
+.center {
+    text-align: center;
+    width: 100%;
+}
+
+.form-container {
+    text-align: center;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+form {
+    display: inline-block;
+    width: 80%;
+    text-align: left;
+    padding: 16px;
+    padding-top: 0px;
+}
+
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+    form {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    form {
+        width: 96%;
+    }
+}
+
+
+form input, label, textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 24px;
+    margin: 6px 0px 6px 0px;
+}
+
+button, input[type=submit] {
+    cursor: pointer;
+    padding: 12px;
+    font-size: 16px;
+}
+
+input, button, textarea {
+    border-radius: 0px;
+    border: 1px solid gray;
+    outline: none;
+}
+
+input:focus, button:focus, textarea:focus {
+    border-color: black;
+}
+
+input, textarea {
+    padding-left: 4px;
+}
+
+textarea {
+    padding-top: 4px;
+    height: 60px;
+    resize: none;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    display: block;
+    border: 0px none;
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 1px solid gray;
+}
+
+.navbar {
+    text-align: left;
+    display: inline-block;
+    list-style-type: none;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.navbar .navbar-item {
+    font-size: 1.05em;
+    text-align: center;
+    display: inline-block;
+    width: 120px;
+    height: 100%;
+}
+
+a, a:visited {
+    color: rgb(0, 110, 255);
+}
+
+.danger {
+    font-size: .9em;
+    color: red;
+}
+
+.hidden-btn {
+    border: 0px none;
+    background-color: transparent;
+}
