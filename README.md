@@ -14,3 +14,5 @@ Estrutura de diretórios:
 - **src**: Outros arquivos JS
 
 <hr>
+
+Tecnologias usadas: `Express`, `SQLLite3`, `EJS`, `JSON Web Token`. Usei também esta [simples biblioteca de classes](https://github.com/isaqueks/nodejs-mvc)  criada por mim, para facilitar o desenvolvimento no padrão MVC.
